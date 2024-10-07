@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Return History</h2>
+    <ul>
+        {% for return_item in returns %}
+            <li>{{ return_item.borrowing.book.title }} - Returned on {{ return_item.return_date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

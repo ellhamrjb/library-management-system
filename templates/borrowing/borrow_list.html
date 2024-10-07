@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Borrowed Books</h2>
+    <ul>
+        {% for borrow in borrowings %}
+            <li>{{ borrow.book.title }} - Borrowed on {{ borrow.borrow_date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
